@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/javascript" src="https://cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Outline' viewBox='0 0 24 24' width='512' height='512'%3E%3Cpath d='M7,0H4A4,4,0,0,0,0,4V7a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V4A4,4,0,0,0,7,0ZM9,7A2,2,0,0,1,7,9H4A2,2,0,0,1,2,7V4A2,2,0,0,1,4,2H7A2,2,0,0,1,9,4Z'/%3E%3Cpath d='M20,0H17a4,4,0,0,0-4,4V7a4,4,0,0,0,4,4h3a4,4,0,0,0,4-4V4A4,4,0,0,0,20,0Zm2,7a2,2,0,0,1-2,2H17a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M7,13H4a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V17A4,4,0,0,0,7,13Zm2,7a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2H7a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M20,13H17a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4h3a4,4,0,0,0,4-4V17A4,4,0,0,0,20,13Zm2,7a2,2,0,0,1-2,2H17a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2Z'/%3E%3C/svg%3E%0A" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Paragrams Loader | BIOS</title>
+</head>
+<body>
+  <section id="bios">
+    <div id="cpn">
+       <div id="cpwarn">
+    <p>Do not close this window until setup has been complete | You must be connected to the wifi also</p>
+       </div>
+    <p>ParaLoader 1.1 Beta</p>
+     
+    <p>Concept by paragram</p>
+    <p>ParaLoader Build: In-Dev</p>
+    <br />
+    <p>ATAPI CD-ROM: PRALDR</p>
+    <p><span class="blink">Booting up for first time so this may take awhile...</span></p>
+	<div class="blink2" id="myProgress">
+  <div id="myBar"></div>
+</div>
+			<div class="center">
+<h2 id="status" class="center"> Online Status: Online </h2>			</div>
+       </div>
+   <div id="log">
+    <ul id="log_output"></ul>
+    <div class="actions">
+    <pre style="color:#42cf68;">
+
+                                           .""--..__
+                     _                     []       ``-.._
+                  .'` `'.                  ||__           `-._
+                 /    ,-.\                 ||_ ```---..__     `-.
+                /    /:::\\               /|//}          ``--._  `.
+                |    |:::||              |////}                `-. \
+                |    |:::||             //'///                    `.\
+                |    |:::||            //  ||'                      `|
+                /    |:::|/        _,-//\  |p
+               /`    |:::|`-,__,-'`  |/  \ |a
+             /`  |   |'' ||           \   ||r
+           /`    \   |   ||            |  /|a
+         |`       |  |   |)            \ | |g
+        |          \ |   /      ,.__    \| |r
+        /           `         /`    `\   | |a
+       |                     /        \  / |m
+       |                     |        | /  ||
+       /         /           |        `(   ||
+      /          .           /          )  ||
+     |            \          |     ________||
+    /             |          /     `-------.|
+   |\            /          |              ||
+   \/`-._       |           /              ||
+    //   `.    /`           |              ||
+   //`.    `. |             \              ||
+  ///\ `-._  )/             |              ||
+ //// )   .(/               |              ||
+ ||||   ,'` )               /              //
+ ||||  /                    /             || 
+ `\\` /`                    |             // 
+     |`                     \            ||  
+    /                        |           //  
+  /`                          \         //   
+/`                            |        ||    
+`-.___,-.      .-.        ___,'        (/    
+         `---'`   `'----'`
+		</pre>
+    <div id="stamp" class="float-right">
+			<pre>
+
+                                             ,--,  ,.-.
+               ,                   \,       '-,-`,'-.' | ._
+              /|           \    ,   |\         }  )/  / `-,',
+              [ ,          |\  /|   | |        /  \|  |/`  ,`
+              | |       ,.`  `,` `, | |  _,...(   (      .',
+              \  \  __ ,-` `  ,  , `/ |,'      Y     (   /_L\
+               \  \_\,``,   ` , ,  /  |         )         _,/
+                \  '  `  ,_ _`_,-,<._.<        /         /
+                 ', `>.,`  `  `   ,., |_      |         /
+                   \/`  `,   `   ,`  | /__,.-`    _,   `\
+               -,-..\  _  \  `  /  ,  / `._) _,-\`       \
+                \_,,.) /\    ` /  / ) (-,, ``    ,        |
+               ,` )  | \_\       '-`  |  `(               \
+              /  /```(   , --, ,' \   |`<`    ,            |
+             /  /_,--`\   <\  V /> ,` )<_/)  p \      _____)
+       ,-, ,`   `   (_,\ \    |   /) / __/  a   `----`
+      (-, \           ) \ ('_.-._)/ /,`    r
+      | /  `          `/ \\ V   V, /`     a
+   ,--\(        ,     <_/`\\     ||      g
+  (   ,``-     \/|         \-A.A-`|     r
+ ,>,_ )_,..(    )\          -,,_-`  _-ma
+(_ \|`   _,/_  /  \_            ,--`
+ \( `   <.,../`     `-.._   _,-`
+				
+			</pre>
+		</div>
+    </div>
+  </section>
+  <section id="loader">
+    <div class='loader'></div>
+    <script>
+      ConsoleLogHTML.connect(document.getElementById("log_output")); // Redirect log messages
+      console.log("System is booting...");
+      setTimeout(function(){
+        console.log("Determining Build [5%]")
+				m(5)
+// maybe compare version numbers to external file here (server)
+      }, 1000);
+      setTimeout(function(){
+        console.log("Loading Config [14%]")
+				m(14)
+				// open localstorage and write things here soon
+      }, 3000);
+        setTimeout(function(){
+        console.log("Starting to cache items [22%]")
+					m(22)
+					//cache the data server changed
+      }, 5000);
+            setTimeout(function(){
+        console.log("Loading winbox.min.js [34%]")
+							m(34)
+      }, 7000);
+            setTimeout(function(){
+        console.log("Loading winbox.min.css [40%]")
+							m(40)
+      }, 9000);
+      setTimeout(function(){
+        console.log("Loading style.less [52%]")
+				m(52)
+      }, 11000);
+       setTimeout(function(){
+        console.log("Loading images.less [60%]")
+				 m(60)
+      }, 13000);
+          setTimeout(function(){
+        console.log("Loading winbox.less [72%]")
+						m(72)
+      }, 15000);
+       setTimeout(function(){
+        console.log("Loading SVG's [86%]")
+				 m(86)
+      }, 17000);
+         setTimeout(function(){
+        console.log("Loading Games... [90%]")
+					 m(90)
+      }, 19000);
+       setTimeout(function(){
+        console.log("Loading Images... [97%]")
+				 m(97)
+      }, 21000);
+          setTimeout(function(){
+        console.log("Loading Styles... [99%]")
+						m(99)
+      }, 23000);
+          setTimeout(function(){
+         console.log("Booted successfully! [100%]")
+						m(100)
+      }, 25000);
+    </script> 
+   <div class="page">
+ <iframe src="pages/index.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+Idk how your computer displayed boot screen (if it did) cause either your JS is disabled or you need a new OS / Computer / Both. If you are up to date with what you are running, than something may be seriously wrong on you end because your computer is telling us it cant support this content (AKA whole site 💀), Sorry.
+ </iframe>
+    </div>
+    
+    
+      <script>
+        if (localStorage.hasOwnProperty("boot") == true){
+          window.setTimeout(function() {
+            var biosEl = document.getElementById('bios');
+            var loaderEl = document.getElementById('loader');
+            biosEl.style.display = 'none';
+            loaderEl.style.display = 'block';
+          }, 500);
+        } else {
+          window.setTimeout(function() {
+            var biosEl = document.getElementById('bios');
+            var loaderEl = document.getElementById('loader');
+            biosEl.style.display = 'none';
+            loaderEl.style.display = 'block';
+            localStorage.setItem("boot", "true");
+          }, 25000);
+        }
+
+function m(amount) {
+	var elem = document.getElementById("myBar");
+	elem.style.width = amount + "%";
+}
+
+function updateOnlineStatus(){
+
+    let content = document.getElementById("status");
+    let textContent = `Status: ${navigator.onLine ? "Online" : "Offline"} `;
+    content.innerHTML = textContent;
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    updateOnlineStatus();
+  });
+				
+			setTimeout(function(){
+				 if(!navigator.onLine){
+  alert('setup needs wifi, please connect than relaunch');
+					 window.close()
+ }
+			updateOnlineStatus();
+      }, 1000);
+      </script>
+  </section>
+</body>
+</html>
