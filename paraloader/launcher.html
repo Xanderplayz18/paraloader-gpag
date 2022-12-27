@@ -142,31 +142,31 @@
 					//cache the data server changed
       }, 5000);
             setTimeout(function(){
-        console.log("Loading winbox.min.js [34%]")
+        console.log("Loading decompile.min.js [34%]")
 							m(34)
       }, 7000);
             setTimeout(function(){
-        console.log("Loading winbox.min.css [40%]")
+        console.log("Loading status.js[40%]")
 							m(40)
       }, 9000);
       setTimeout(function(){
-        console.log("Loading style.less [52%]")
+        console.log("Loading style.css [52%]")
 				m(52)
       }, 11000);
        setTimeout(function(){
-        console.log("Loading images.less [60%]")
+        console.log("Loading home.css [60%]")
 				 m(60)
       }, 13000);
           setTimeout(function(){
-        console.log("Loading winbox.less [72%]")
+        console.log("Loading /pages/ [72%]")
 						m(72)
       }, 15000);
        setTimeout(function(){
-        console.log("Loading SVG's [86%]")
+        console.log("Loading favicon.svg [86%]")
 				 m(86)
       }, 17000);
          setTimeout(function(){
-        console.log("Loading Games... [90%]")
+        console.log("Fetching Games... [90%]")
 					 m(90)
       }, 19000);
        setTimeout(function(){
@@ -175,8 +175,8 @@
       }, 21000);
           setTimeout(function(){
         console.log("Loading Config... [99%]")
-					localStorage.getItem("tab_name", tab_name);
-					document.title = tab_name;
+					tabby = localStorage.getItem("tab_name");
+					document.title = tabby;
 						m(99)
       }, 23000);
           setTimeout(function(){
