@@ -4,10 +4,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="application/javascript" src="https://cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
-	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Outline' viewBox='0 0 24 24' width='512' height='512'%3E%3Cpath d='M7,0H4A4,4,0,0,0,0,4V7a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V4A4,4,0,0,0,7,0ZM9,7A2,2,0,0,1,7,9H4A2,2,0,0,1,2,7V4A2,2,0,0,1,4,2H7A2,2,0,0,1,9,4Z'/%3E%3Cpath d='M20,0H17a4,4,0,0,0-4,4V7a4,4,0,0,0,4,4h3a4,4,0,0,0,4-4V4A4,4,0,0,0,20,0Zm2,7a2,2,0,0,1-2,2H17a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M7,13H4a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V17A4,4,0,0,0,7,13Zm2,7a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2H7a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M20,13H17a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4h3a4,4,0,0,0,4-4V17A4,4,0,0,0,20,13Zm2,7a2,2,0,0,1-2,2H17a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2Z'/%3E%3C/svg%3E%0A" type="image/svg+xml" />
+	<link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Paragrams Loader | BIOS</title>
+  <title>ParaLoader | Booting up... </title>
 </head>
 <body>
   <section id="bios">
@@ -113,6 +113,26 @@
       }, 1000);
       setTimeout(function(){
         console.log("Loading Config [14%]")
+				
+				if (!localStorage.getItem('tab_name')){
+				let tab_name = prompt("Please enter site tab name (Cloaking?)", "ParaLoader | Home");
+					localStorage.setItem("tab_name", tab_name);
+					document.title = tab_name;
+				} else {
+					name = localStorage.getItem("tab_name");
+					document.title = name;
+				}
+
+				if (!localStorage.getItem('favicon')){
+				let favicon = prompt("Please enter site favicon (Cloaking?)", "assets/favicon.svg");
+					localStorage.setItem("favicon", favicon);
+					const faviconthing = document.querySelector('[rel=icon]');
+					faviconthing.href = favicon;
+				} else {
+					img = localStorage.getItem("favicon");
+					const faviconthing = document.querySelector('[rel=icon]');
+					faviconthing.href = img;				
+				}
 				m(14)
 				// open localstorage and write things here soon
       }, 3000);
@@ -154,7 +174,9 @@
 				 m(97)
       }, 21000);
           setTimeout(function(){
-        console.log("Loading Styles... [99%]")
+        console.log("Loading Config... [99%]")
+					localStorage.getItem("tab_name", tab_name);
+					document.title = tab_name;
 						m(99)
       }, 23000);
           setTimeout(function(){
