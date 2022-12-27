@@ -77,7 +77,7 @@
 	async function attemptUpdate(){
     const LOCAL_VERSION = "0.0";
     const services = [
-        "://BIOS.paragram.repl.co"
+        "://paraloader.paragram.repl.co"
     ];
     let v = LOCAL_VERSION;
     let vp = "";
@@ -101,18 +101,18 @@
             let ni = confirm("New update avaliable: \n -Version: "+v["version"]+"\n =Description: "+v["description"]+"\nInstall now?");
             if(ni){
                 try{
-                let files = await fetch("https://corsproxy.io/?https%3A%2F%2Fcodeload.github.com%2FMath-Study%2Fbunker-v1%2Fzip%2Frefs%2Fheads%2Fmain");
+                let files = await fetch("https%3A%2F%2Fcodeload.github.com%2FParagramex%2Fparaloader%2Fzip%2Frefs%2Fheads%2Fmain");
                 //download repo zip, extract, filter for /public/, write each file to user selected directory
                 files = await files.blob();
                 let k = await (new zip.ZipReader(new zip.BlobReader(files))).getEntries();
-                alert("select bunker directory");
+                alert("select install directory");
                 const d = await window.showDirectoryPicker({
-                    id: "bunker"
+                    id: "paraloader"
                 });
                 let dir = {};
                 for(let i in k){
-                    if(k[i].filename.indexOf("/public/") != -1 && k[i].filename.split("/public/")[1] != "" && k[i].filename[k[i].filename.length-1] != "/"){
-                        let name = k[i].filename.replace("bunker-v1-main/public/", "");
+                    if(k[i].filename.indexOf("/") != -1 && k[i].filename.split("/")[1] != "" && k[i].filename[k[i].filename.length-1] != "/"){
+                        let name = k[i].filename.replace("paraloader-main", "");
                         let dirs = name.split("/");
                         let filename;
                         let targetDirectoryHandle = d;
