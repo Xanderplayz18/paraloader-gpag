@@ -1,15 +1,29 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="application/javascript" src="https://cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
-	<link rel="icon" href="./assets/favicon.svg" />
-  <link rel="stylesheet" href="./assets/css/launcher.css">
+	<link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/launcher.css">
 
   <title>ParaLoader | Booting up... </title>
 </head>
 <body>
+	 <script>
+		 booted = localStorage.getItem("boot")
+        if (booted == "true"){
+          window.setTimeout(function() {
+           window.location.replace("pages/index.html");
+          }, 5000);
+        } else {
+          window.setTimeout(function() {
+            localStorage.setItem("boot", "true");
+						window.location.replace("pages/index.html");
+          }, 25000);
+        }
+	 </script>
   <section id="bios">
     <div id="cpn">
        <div id="cpwarn">
@@ -101,9 +115,15 @@
 		</div>
     </div>
   </section>
-  <section id="loader">
+ <!-- <section id="loader">
     <div class='loader'></div>
-    <script>
+   <div class="page">
+ <iframe src="pages/index.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+Idk how your computer displayed boot screen (if it did) cause either your JS is disabled or you need a new OS / Computer / Both. If you are up to date with what you are running, than something may be seriously wrong on you end because your computer is telling us it cant support this content (AKA whole site 💀), Sorry.
+ </iframe>
+    </div>
+  </section>-->
+	 		 <script>
       ConsoleLogHTML.connect(document.getElementById("log_output")); // Redirect log messages
       console.log("System is booting...");
       setTimeout(function(){
@@ -142,31 +162,31 @@
 					//cache the data server changed
       }, 5000);
             setTimeout(function(){
-        console.log("Loading decompile.min.js [34%]")
+        console.log("Loading winbox.min.js [34%]")
 							m(34)
       }, 7000);
             setTimeout(function(){
-        console.log("Loading status.js[40%]")
+        console.log("Loading winbox.min.css [40%]")
 							m(40)
       }, 9000);
       setTimeout(function(){
-        console.log("Loading style.css [52%]")
+        console.log("Loading style.less [52%]")
 				m(52)
       }, 11000);
        setTimeout(function(){
-        console.log("Loading home.css [60%]")
+        console.log("Loading images.less [60%]")
 				 m(60)
       }, 13000);
           setTimeout(function(){
-        console.log("Loading /pages/ [72%]")
+        console.log("Loading winbox.less [72%]")
 						m(72)
       }, 15000);
        setTimeout(function(){
-        console.log("Loading favicon.svg [86%]")
+        console.log("Loading SVG's [86%]")
 				 m(86)
       }, 17000);
          setTimeout(function(){
-        console.log("Fetching Games... [90%]")
+        console.log("Loading Games... [90%]")
 					 m(90)
       }, 19000);
        setTimeout(function(){
@@ -183,32 +203,7 @@
          console.log("Booted successfully! [100%]")
 						m(100)
       }, 25000);
-    </script> 
-   <div class="page">
- <iframe src="./pages/index.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
-Idk how your computer displayed boot screen (if it did) cause either your JS is disabled or you need a new OS / Computer / Both. If you are up to date with what you are running, than something may be seriously wrong on you end because your computer is telling us it cant support this content (AKA whole site 💀), Sorry.
- </iframe>
-    </div>
-    
-    
-      <script>
-        if (localStorage.hasOwnProperty("boot") == true){
-          window.setTimeout(function() {
-            var biosEl = document.getElementById('bios');
-            var loaderEl = document.getElementById('loader');
-            biosEl.style.display = 'none';
-            loaderEl.style.display = 'block';
-          }, 500);
-        } else {
-          window.setTimeout(function() {
-            var biosEl = document.getElementById('bios');
-            var loaderEl = document.getElementById('loader');
-            biosEl.style.display = 'none';
-            loaderEl.style.display = 'block';
-            localStorage.setItem("boot", "true");
-          }, 25000);
-        }
-
+   
 function m(amount) {
 	var elem = document.getElementById("myBar");
 	elem.style.width = amount + "%";
@@ -232,6 +227,5 @@ function updateOnlineStatus(){
 			updateOnlineStatus();
       }, 1000);
       </script>
-  </section>
 </body>
 </html>

@@ -1,4 +1,4 @@
-     body {
+body {
         margin: 0;
         animation: fadeInAnimation ease 1s;
         animation-iteration-count: 1;
@@ -59,7 +59,7 @@
   color:#ccc;
 }
   #loader {
-    display: none;
+    display: block;
     background: #000;
     color: #ccc;
   }
