@@ -1,8 +1,5 @@
-booted = localStorage.getItem("boot")
+console.log("inject.js loaded")
 window.callbacks = [];
-if (booted != "true"){
-window.location.replace("../launcher.html")
-}
 try{
 	function getFile(path,callback){
 		window.parent.postMessage({

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<link rel="stylesheet" href="../css/collection.css">
+<link rel="stylesheet" href="../css/page.css">
+<script src="../js/scripts.js"></script>
 		</head>
    <body>
-		 <h3>Loading...</h3>
-		 <br>
-		 <br>
-		 <p>In-Dev</p>
+		 </div>
+		<br>
+		<div class="applist">
+		</div>
+		<br>
+		<div id="appimport" style="display: none;"></div>
+		<script src="../modules/config.js"></script>
+		<script>
+			(function(){
+	const d = window._config;
+	window.apps={};
+	for(var i in d.apps){
+		getFile(`/modules/src/${d.apps[i]}/config.js`, function(e){
+			eval(e);
+		});
+	}
+	getFile(`/js/loadmods.js`, function(e){
+		eval(e);
+	});
+})();
+		</script>
 	 </body>
 </html>
 	    
