@@ -30,7 +30,7 @@
 
         </div>
     </div>
-    									<h3>Version 1.0 Beta</h3>
+    									<h3>Version 1.0 Beta <span id="version"></span></h3>
 									<hr>
 									<p>Yup, this is gonna be a dead project :/</p>
 									<a href="#" onclick="attemptUpdate();" style="color: peachpuff;"> > Check for updates < </a>
@@ -65,7 +65,7 @@
     <div class="gba-tile-wrap">
     <br>
       <div class="sega-emu-tile-1 third-stripe">
-        <h1 class="tile-text-1"><a href="#" class="tile-text-1"><strike> Website Viewer </strike></a></h1>
+        <h1 class="tile-text-1"><a href="./viewer.html" class="tile-text-1"> Website Viewer </a></h1>
       </div>
 <br>
       <div class="more-emu-tile fourth-stripe">
@@ -84,7 +84,39 @@
     <script src="../js/decompile.js"></script>
     <script src="../js/status.js"></script>
 			<script>
-	async function attemptUpdate(){
+		/*			async function checkUpdates(){
+    const LOCAL_VERSION = "1.0";
+    const services = [
+        "://paraloader.paragram.repl.co"
+    ];
+    let v = LOCAL_VERSION;
+    let vp = "";
+    for(let i in services){
+        try{
+            let newVersion = await fetch("https"+services[i]+"/version.txt");
+            newVersion = await newVersion.json();
+            v=newVersion;
+            vp = i;
+            break;
+        } catch(e){
+						alert("could not fetch version, maybe connect to internet?")
+            console.log(`Failed to get update service ${i}: ${services[i]} failed`);
+            continue;
+        }
+    }
+    if(v["version"] != LOCAL_VERSION){
+var vers = document.getElementById("version");
+vers.style.color = "red";
+vers.innerHTML = 'Outdated Version (' + LOCAL_VERSION  + '). Please use version: ' + v["version"] + ' by upgrading.'
+		} else {
+			var vers = document.getElementById("version");
+			vers.style.color = "green";
+			vers.innerHTML = "Up to date!!!"
+		}
+*/
+						
+						
+async function attemptUpdate(){
     const LOCAL_VERSION = "1.0";
     const services = [
         "://paraloader.paragram.repl.co"
